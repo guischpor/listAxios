@@ -4,14 +4,13 @@ StyleSheet,
 Text,
 View }
 from 'react-native';
-import ItemList from '../components/itemList';
 
-export default class itemListScreen extends React.Component {
+export default class itens extends React.Component {
 
 render() {
     return (
         <View>
-            <ItemList></ItemList>
+            <Text>Detalhes do Ite...m</Text>
         </View>
     );
     }

@@ -1,2 +1,2 @@
-import App from './src/App';
-export default App;
+import ItemListScreen from './src/screens/itemListScreen';
+export default ItemListScreen;
