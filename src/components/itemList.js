@@ -2,7 +2,8 @@ import React from 'react';
 import {
 StyleSheet,
 Text,
-View }
+View,
+ScrollView  }
 from 'react-native';
 import Itens from './Itens'
 import axios from 'axios';
@@ -29,12 +30,17 @@ componentWillMount() {
 
 render() {
     return (
-        <View>
-            {this.state.itensListProducts.map( (item) => {
-                console.log(item.titulo);
+        <ScrollView style={{backgroundColor: '#DDD'}}>
+            {this.state.itensListProducts.map ( item => {
+                return (
+                    <Itens
+                        key={item.titulo}
+                        item={item}
+                    />
+                );
             })
-            };
-        </View>
+            }
+        </ScrollView>
     );
     }
 }
