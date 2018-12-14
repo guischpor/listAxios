@@ -3,7 +3,8 @@ import {
 StyleSheet,
 Text,
 View,
-ScrollView  }
+ScrollView,
+StatusBar  }
 from 'react-native';
 import Itens from './Itens'
 import axios from 'axios';
@@ -31,6 +32,9 @@ componentWillMount() {
 render() {
     return (
         <ScrollView style={{backgroundColor: '#DDD'}}>
+            <View style={styles.barTitle}>
+                <Text style={styles.textTitle}>Lista de Produtos</Text>
+            </View>
             {this.state.itensListProducts.map ( item => {
                 return (
                     <Itens
@@ -45,3 +49,18 @@ render() {
     }
 }
 
+const styles = StyleSheet.create({
+    barTitle:{
+        backgroundColor: '#3F51B5',
+        padding: 20,
+        marginTop: 24,
+        width: 420,
+        height: 50
+    },
+
+    textTitle:{
+        color: 'white',
+        alignItems: 'center',
+        
+    }
+});

@@ -4,6 +4,7 @@ StyleSheet,
 Text,
 View,
 Image,
+StatusBar
 }
 from 'react-native';
 
@@ -12,6 +13,7 @@ export default class itens extends React.Component {
 render() {
     return (
         <View style={styles.item}>
+            
             <View style={styles.foto}>
                 <Image style={{ height: 100, width: 100 }}
                     source={{ uri: this.props.item.foto}}
@@ -38,13 +40,14 @@ render() {
 
 const styles = StyleSheet.create({
     item:{
-        borderWidth: 0.5,
+        borderWidth: 1,
         borderColor: 'black',
+        borderRadius: 10,
         margin: 10,
         padding: 10,
         flexDirection: 'row',
         backgroundColor: 'white',
-        marginTop: 30,
+        marginTop: 60,
     },
 
     foto:{
