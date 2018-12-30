@@ -13,7 +13,6 @@ export default class itens extends React.Component {
 render() {
     return (
         <View style={styles.item}>
-            
             <View style={styles.foto}>
                 <Image style={{ height: 100, width: 100 }}
                     source={{ uri: this.props.item.foto}}
